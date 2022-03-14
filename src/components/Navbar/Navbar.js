@@ -34,24 +34,24 @@ const Navbar = () => {
         <Link className="link" to={"/"}>
           Home
         </Link>
-        <Link className="link" to={"/Browse"}>
+        <Link className="link" to={"/browse"}>
           Browse
         </Link>
       </div>
 
       <div className="right-navigation navigation-icons flex-row align-center">
-        <Link to={"/Authentication"}>
+        <Link to={"/authentication"}>
           <button className="btn btn-primary">Login</button>
         </Link>
 
-        <Link to={"/Wishlist"}>
+        <Link to={"/wishlist"}>
           <p className="badge-on-icon">
             <i className="far fa-bookmark"></i>
             <span className="badge badge-primary icon-badge">4</span>
           </p>
         </Link>
 
-        <Link to={"/Cart"}>
+        <Link to={"/cart"}>
           <p className="badge-on-icon">
             <i className="fas fa-shopping-cart"></i>
             <span className="badge badge-primary icon-badge">4</span>
