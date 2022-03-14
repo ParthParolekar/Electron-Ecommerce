@@ -4,12 +4,12 @@
   box-sizing: border-box;
 }
 
-.nav-links a {
+.nav-links .link {
   color: var(--white);
   text-decoration: none;
 }
 
-.nav-links a:hover {
+.nav-links .link:hover {
   color: var(--off-white);
 }
 

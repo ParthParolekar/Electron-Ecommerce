@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import bigLogo from "../../assets/20220206_152352.png";
 import logo from "../../assets/20220203_122320.png";
 
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const [navLinksVisible, setNavLinksVisible] = useState(false);
-
-  console.log(navLinksVisible);
 
   return (
     <nav className="navigation flex-row space-between align-center">
@@ -16,8 +16,12 @@ const Navbar = () => {
           id="hamburger"
         ></i>
 
-        <img src={bigLogo} className="big-logo" alt="logo" />
-        <img src={logo} className="logo" alt="logo" />
+        <Link to={"/"}>
+          <img src={bigLogo} className="big-logo" alt="logo" />
+        </Link>
+        <Link to={"/"}>
+          <img src={logo} className="logo" alt="logo" />
+        </Link>
       </div>
 
       <div
@@ -27,24 +31,32 @@ const Navbar = () => {
             : "nav-links nav-links-visible"
         }
       >
-        <a href="#">Home</a>
-        <a href="./Components/product/product.html">Browse</a>
+        <Link className="link" to={"/"}>
+          Home
+        </Link>
+        <Link className="link" to={"/Browse"}>
+          Browse
+        </Link>
       </div>
 
       <div className="right-navigation navigation-icons flex-row align-center">
-        <a href="./authentication.html">
+        <Link to={"/Authentication"}>
           <button className="btn btn-primary">Login</button>
-        </a>
+        </Link>
 
-        <a href="./Components/wishlist/wishlist.html" className="badge-on-icon">
-          <i className="far fa-bookmark"></i>
-          <span className="badge badge-primary icon-badge">4</span>
-        </a>
+        <Link to={"/Wishlist"}>
+          <p className="badge-on-icon">
+            <i className="far fa-bookmark"></i>
+            <span className="badge badge-primary icon-badge">4</span>
+          </p>
+        </Link>
 
-        <a href="./Components/cart/cart.html" className="badge-on-icon">
-          <i className="fas fa-shopping-cart"></i>
-          <span className="badge badge-primary icon-badge">4</span>
-        </a>
+        <Link to={"/Cart"}>
+          <p className="badge-on-icon">
+            <i className="fas fa-shopping-cart"></i>
+            <span className="badge badge-primary icon-badge">4</span>
+          </p>
+        </Link>
       </div>
     </nav>
   );
