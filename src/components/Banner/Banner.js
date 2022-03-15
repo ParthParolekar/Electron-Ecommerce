@@ -11,7 +11,7 @@ const Banner = () => {
       <div className="banner-cover"></div>
       <h1 className="banner-heading">
         One stop for all of your gaming needs
-        <Link to="/Browse">
+        <Link to="/browse">
           <button className="btn btn-secondary">
             See Products <i className="fas fa-arrow-right"></i>
           </button>
