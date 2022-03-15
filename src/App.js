@@ -1,7 +1,7 @@
 import "./App.css";
 
-import { Navbar } from "./components/components";
-import { Authentication, Browse, Cart, Home, Wishlist } from "./pages/pages";
+import { Navbar } from "./components/";
+import { Authentication, Browse, Cart, Home, Wishlist } from "./pages";
 
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 function App() {
