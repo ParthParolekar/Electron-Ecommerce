@@ -16,10 +16,10 @@ const Navbar = () => {
           id="hamburger"
         ></i>
 
-        <Link to={"/"}>
+        <Link to="/">
           <img src={bigLogo} className="big-logo" alt="logo" />
         </Link>
-        <Link to={"/"}>
+        <Link to="/">
           <img src={logo} className="logo" alt="logo" />
         </Link>
       </div>
@@ -31,27 +31,27 @@ const Navbar = () => {
             : "nav-links nav-links-visible"
         }
       >
-        <Link className="link" to={"/"}>
+        <Link className="link" to="/">
           Home
         </Link>
-        <Link className="link" to={"/browse"}>
+        <Link className="link" to="/browse">
           Browse
         </Link>
       </div>
 
       <div className="right-navigation navigation-icons flex-row align-center">
-        <Link to={"/authentication"}>
+        <Link to="/authentication">
           <button className="btn btn-primary">Login</button>
         </Link>
 
-        <Link to={"/wishlist"}>
+        <Link to="/wishlist">
           <p className="badge-on-icon">
             <i className="far fa-bookmark"></i>
             <span className="badge badge-primary icon-badge">4</span>
           </p>
         </Link>
 
-        <Link to={"/cart"}>
+        <Link to="/cart">
           <p className="badge-on-icon">
             <i className="fas fa-shopping-cart"></i>
             <span className="badge badge-primary icon-badge">4</span>
