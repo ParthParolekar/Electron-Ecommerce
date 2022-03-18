@@ -60,7 +60,7 @@ const Navbar = ({ userLoggedIn }) => {
 
       <div className="right-navigation navigation-icons flex-row align-center">
         {!userLoggedIn ? (
-          <Link to="/authentication">
+          <Link to="/login">
             <button className="btn btn-primary">Login</button>
           </Link>
         ) : (

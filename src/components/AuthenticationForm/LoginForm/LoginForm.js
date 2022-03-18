@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { useAuth } from "../../../Context/AuthContext/AuthContext";
 
@@ -67,11 +67,11 @@ const LoginForm = ({ setShowSignupForm }) => {
         </a>
       </button>
 
-      <button className="btn btn-link" id="btn-to-signup">
-        <p onClick={() => setShowSignupForm(true)} href="#" className="link">
-          Don't have an account? Sign Up
-        </p>
-      </button>
+      <Link to="/signup">
+        <button className="btn btn-link" id="btn-to-signup">
+          <p className="link">Don't have an account? Sign Up</p>
+        </button>
+      </Link>
     </div>
   );
 };

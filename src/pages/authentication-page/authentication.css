@@ -32,11 +32,3 @@
 .link {
   color: var(--white);
 }
-
-.signup-page {
-  transform: rotateY(180deg);
-}
-
-.auth-component-rotate {
-  transform: rotateY(180deg);
-}
