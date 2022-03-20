@@ -22,7 +22,7 @@ const SignupForm = ({ setShowSignupForm }) => {
     const signupResponse = await axios.post("api/auth/signup", newUserDetails);
 
     // Login the new user if signup is successful
-    if (signupResponse.status == 201) {
+    if (signupResponse.status === 201) {
       const response = await axios.post("api/auth/login", {
         email: newUserDetails.email,
         password: newUserDetails.password,

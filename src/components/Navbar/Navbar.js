@@ -23,7 +23,7 @@ const Navbar = ({ userLoggedIn }) => {
   };
 
   const logOutHandler = () => {
-    dispatch({ type: "LOGOUT_USER", payload: loggedOutUser });
+    dispatch({ type: "HANDLE_USER_AUTH", payload: loggedOutUser });
     localStorage.removeItem("jwt");
   };
   return (

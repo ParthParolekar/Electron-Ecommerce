@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { useAuth } from "../../../Context/AuthContext/AuthContext";
 
-const LoginForm = ({ setShowSignupForm }) => {
+const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [authState, dispatch] = useAuth();
@@ -16,7 +16,7 @@ const LoginForm = ({ setShowSignupForm }) => {
 
     const response = await axios.post("api/auth/login", { email, password });
     if (response.status === 200) {
-      dispatch({ type: "LOGIN_USER", payload: response.data });
+      dispatch({ type: "HANDLE_USER_AUTH", payload: response.data });
       localStorage.setItem("jwt", JSON.stringify(response.data.encodedToken));
 
       navigate(location.state?.from?.pathname || "/", { replace: true });
