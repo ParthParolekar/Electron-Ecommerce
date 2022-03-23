@@ -1,1 +1,4 @@
 @import "./Navbar/navbar.css";
+@import "./SearchBar/search-bar.css";
+@import "./Card/card.css";
+@import "./Filter/filter.css";
