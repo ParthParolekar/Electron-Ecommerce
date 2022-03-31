@@ -5,7 +5,7 @@ import {
   FilterHeader,
 } from "./FilterComponents";
 
-const Filter = ({ showFilter, setShowFilter }) => {
+const Filter = ({ showFilter, setShowFilter, applyFilters }) => {
   return (
     <div
       className={
@@ -17,7 +17,7 @@ const Filter = ({ showFilter, setShowFilter }) => {
     >
       <FilterHeader setShowFilter={setShowFilter} />
       <FilterContainer />
-      <FilterButtons />
+      <FilterButtons applyFilters={applyFilters} />
     </div>
   );
 };

@@ -1,6 +1,14 @@
 import React from "react";
 
-const Card = ({ discount, img, imgAlt, title, costPrice, sellingPrice }) => {
+const Card = ({
+  discount,
+  img,
+  imgAlt,
+  title,
+  costPrice,
+  sellingPrice,
+  rating,
+}) => {
   return (
     <div className="card card-shadow vertical-card">
       <div className="card-header">
@@ -12,6 +20,7 @@ const Card = ({ discount, img, imgAlt, title, costPrice, sellingPrice }) => {
         <div className="card-subtext">
           <span className="cost-price">₹{costPrice}</span>
           <span className="selling-price">₹{sellingPrice}</span>
+          <div>{rating}/5</div>
         </div>
       </div>
       <div className="card-buttons flex-row justify-center align-center flex-wrap">
