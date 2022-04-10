@@ -4,10 +4,12 @@ import logo from "../../assets/20220203_122320.png";
 
 import { Link } from "react-router-dom";
 import { useAuth } from "../../Context/AuthContext/AuthContext";
+import { useUser } from "../../Context/UserContext/UserContext";
 
 const Navbar = ({ userLoggedIn }) => {
   const [navLinksVisible, setNavLinksVisible] = useState(false);
   const [, dispatch] = useAuth();
+  const [userState] = useUser();
 
   const loggedOutUser = {
     foundUser: {
@@ -72,14 +74,22 @@ const Navbar = ({ userLoggedIn }) => {
         <Link to="/wishlist">
           <p className="badge-on-icon">
             <i className="far fa-bookmark"></i>
-            <span className="badge badge-primary icon-badge">4</span>
+            {userLoggedIn && (
+              <span className="badge badge-primary icon-badge">
+                {userState.wishlist.length}
+              </span>
+            )}
           </p>
         </Link>
 
         <Link to="/cart">
           <p className="badge-on-icon">
             <i className="fas fa-shopping-cart"></i>
-            <span className="badge badge-primary icon-badge">4</span>
+            {userLoggedIn && (
+              <span className="badge badge-primary icon-badge">
+                {userState.cart.length}
+              </span>
+            )}
           </p>
         </Link>
       </div>

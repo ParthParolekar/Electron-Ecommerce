@@ -1,14 +1,25 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../Context/AuthContext/AuthContext";
+import { useUser } from "../../Context/UserContext/UserContext";
+import CartButton from "../CartButton/CartButton";
+import QuantityButtons from "../QuantityButtons/QuantityButtons";
+import WishlistButton from "../WishlistButton/WishlistButton";
 
-const Card = ({
-  discount,
-  img,
-  imgAlt,
-  title,
-  costPrice,
-  sellingPrice,
-  rating,
-}) => {
+const Card = ({ product }) => {
+  const {
+    _id,
+    discount,
+    img,
+    imgAlt,
+    title,
+    costPrice,
+    sellingPrice,
+    rating,
+    qty,
+  } = product;
+
   return (
     <div className="card card-shadow vertical-card">
       <div className="card-header">
@@ -24,8 +35,9 @@ const Card = ({
         </div>
       </div>
       <div className="card-buttons flex-row justify-center align-center flex-wrap">
-        <button className="btn btn-primary text-btn">ADD TO CART</button>
-        <button className="btn btn-outline-secondary text-btn">WISHLIST</button>
+        {qty > 0 && <QuantityButtons qty={qty} _id={_id} />}
+        <CartButton product={product} />
+        <WishlistButton product={product} />
       </div>
     </div>
   );
