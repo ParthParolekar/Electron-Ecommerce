@@ -38,15 +38,6 @@ const Browse = () => {
       filterState;
     let displayProducts = productList;
 
-    // if (sortByPrice) {
-    //   displayProducts =
-    //     sortByPrice === "lowToHigh"
-    //       ? [...displayProducts].sort((a, b) => a.sellingPrice - b.sellingPrice)
-    //       : [...displayProducts].sort(
-    //           (a, b) => b.sellingPrice - a.sellingPrice
-    //         );
-    // }
-
     if (filterByCategories.length > 0) {
       displayProducts = [].concat.apply(
         [],
@@ -100,7 +91,8 @@ const Browse = () => {
           )}
           {filteredProducts.map((product) => (
             <Card
-              key={product._id}
+              product={product}
+              _id={product._id.toString()}
               discount={product.discount}
               img={product.img}
               imgAlt={product.imgAlt}
@@ -108,6 +100,7 @@ const Browse = () => {
               costPrice={product.costPrice}
               sellingPrice={product.sellingPrice}
               rating={product.rating}
+              key={product._id}
             />
           ))}
         </div>
