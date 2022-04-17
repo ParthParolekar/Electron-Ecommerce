@@ -2,3 +2,5 @@
 @import "./SearchBar/search-bar.css";
 @import "./Card/card.css";
 @import "./Filter/filter.css";
+@import "./Categories/categories.css";
+@import "./CategoryCard/category-card.css";

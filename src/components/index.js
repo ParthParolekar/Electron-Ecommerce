@@ -9,6 +9,8 @@ import CartButton from "./CartButton/CartButton";
 import WishlistButton from "./WishlistButton/WishlistButton";
 import CartInfo from "./CartInfo/CartInfo";
 import QuantityButtons from "./QuantityButtons/QuantityButtons";
+import CategoryCard from "./CategoryCard/CategoryCard";
+import Categories from "./Categories/Categories";
 export {
   Navbar,
   Banner,
@@ -21,4 +23,6 @@ export {
   WishlistButton,
   CartInfo,
   QuantityButtons,
+  CategoryCard,
+  Categories,
 };

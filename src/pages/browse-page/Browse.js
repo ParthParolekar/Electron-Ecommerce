@@ -31,6 +31,7 @@ const Browse = () => {
 
   useEffect(() => {
     setFilteredProducts(productList);
+    applyFilters();
   }, [productList]);
 
   const applyFilters = () => {

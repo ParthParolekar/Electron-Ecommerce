@@ -1,6 +1,6 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import axios from "axios";
+import { useState, useEffect } from "react";
 import { useFilter } from "../../../../Context/FilterContext/FilterContext";
 
 const CategoryFilter = ({ setShowCategoryFilter, showCategoryFilter }) => {

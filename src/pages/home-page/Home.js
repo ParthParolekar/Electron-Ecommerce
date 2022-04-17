@@ -1,8 +1,13 @@
 import React from "react";
-import { Banner } from "../../components";
+import { Banner, Categories } from "../../components";
 
 const Home = () => {
-  return <Banner />;
+  return (
+    <>
+      <Banner />
+      <Categories />
+    </>
+  );
 };
 
 export default Home;
