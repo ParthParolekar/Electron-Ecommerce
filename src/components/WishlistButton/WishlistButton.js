@@ -59,7 +59,8 @@ const WishlistButton = ({ product }) => {
     }
   };
 
-  return !userState.wishlist.find((item) => item._id === product._id) ? (
+  return !userState.wishlist.find((item) => item._id === product._id) ||
+    !authState.encodedToken ? (
     <button
       className="btn btn-outline-secondary text-btn"
       onClick={addToWishlist}
