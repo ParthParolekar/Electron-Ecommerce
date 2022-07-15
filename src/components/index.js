@@ -11,6 +11,7 @@ import CartInfo from "./CartInfo/CartInfo";
 import QuantityButtons from "./QuantityButtons/QuantityButtons";
 import CategoryCard from "./CategoryCard/CategoryCard";
 import Categories from "./Categories/Categories";
+import SingleProductPage from "./SingleProductPage/SingleProductPage";
 export {
   Navbar,
   Banner,
@@ -25,4 +26,5 @@ export {
   QuantityButtons,
   CategoryCard,
   Categories,
+  SingleProductPage,
 };

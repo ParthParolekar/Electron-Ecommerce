@@ -7,7 +7,7 @@ import CartButton from "../CartButton/CartButton";
 import QuantityButtons from "../QuantityButtons/QuantityButtons";
 import WishlistButton from "../WishlistButton/WishlistButton";
 
-const Card = ({ product }) => {
+const Card = ({ product, singleProduct }) => {
   const {
     _id,
     discount,
@@ -20,25 +20,40 @@ const Card = ({ product }) => {
     qty,
   } = product;
 
+  const navigate = useNavigate();
+
+  const productClickHandler = (e) => {
+    if (e.target.tagName !== "BUTTON") {
+      navigate(`/product/${_id}`);
+    }
+  };
+
   return (
-    <div className="card card-shadow vertical-card">
+    <div
+      className="card card-shadow vertical-card"
+      onClick={productClickHandler}
+    >
       <div className="card-header">
         <span className="badge badge-primary">{`${discount}% off`}</span>
         <img src={img} alt={imgAlt} className="card-image" />
       </div>
-      <div className="card-content">
-        <div className="card-title">{title}</div>
-        <div className="card-subtext">
-          <span className="cost-price">₹{costPrice}</span>
-          <span className="selling-price">₹{sellingPrice}</span>
-          <div>{rating}/5</div>
+      {!singleProduct && (
+        <div className="card-content">
+          <div className="card-title">{title}</div>
+          <div className="card-subtext">
+            <span className="cost-price">₹{costPrice}</span>
+            <span className="selling-price">₹{sellingPrice}</span>
+            <div>{rating}/5</div>
+          </div>
         </div>
-      </div>
-      <div className="card-buttons flex-row justify-center align-center flex-wrap">
-        {qty > 0 && <QuantityButtons qty={qty} _id={_id} />}
-        <CartButton product={product} />
-        <WishlistButton product={product} />
-      </div>
+      )}
+      {!singleProduct && (
+        <div className="card-buttons flex-row justify-center align-center flex-wrap">
+          {qty > 0 && <QuantityButtons qty={qty} _id={_id} />}
+          <CartButton product={product} />
+          <WishlistButton product={product} />
+        </div>
+      )}
     </div>
   );
 };
