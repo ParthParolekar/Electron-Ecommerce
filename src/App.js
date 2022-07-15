@@ -1,7 +1,7 @@
 import "./App.css";
 import Mockman from "mockman-js";
 
-import { Navbar } from "./components/";
+import { Navbar, SingleProductPage } from "./components/";
 import {
   Authentication,
   Browse,
@@ -45,6 +45,7 @@ function App() {
         <Route path="/browse" element={<Browse />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/product/:productId" element={<SingleProductPage />} />
 
         <Route
           path="/cart"

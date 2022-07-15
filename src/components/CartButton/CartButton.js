@@ -58,7 +58,8 @@ const CartButton = ({ product }) => {
       console.log(error);
     }
   };
-  return !userState.cart.find((item) => item._id === product._id) ? (
+  return !userState.cart.find((item) => item._id === product._id) ||
+    !authState.encodedToken ? (
     <button className="btn btn-primary text-btn" onClick={addToCart}>
       ADD TO CART
     </button>
