@@ -53,7 +53,6 @@ const CartButton = ({ product }) => {
             type: "CART_HANDLER",
             payload: res.data.cart,
           });
-          console.log("removed");
         });
     } catch (error) {
       console.log(error);

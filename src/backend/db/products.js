@@ -7,7 +7,7 @@ import { v4 as uuid } from "uuid";
 
 export const products = [
   {
-    _id: 1,
+    _id: uuid(),
     title: "Red Dead Redemption 2",
     img: "https://cdn1.epicgames.com/epic/offer/RDR2PC1227_Epic Games_860x1148-860x1148-b4c2210ee0c3c3b843a8de399bfe7f5c.jpg?h=854&resize=1&w=640",
     imgAlt: "Game Poster",
@@ -20,7 +20,7 @@ export const products = [
     isInWishlist: false,
   },
   {
-    _id: 2,
+    _id: uuid(),
     title: "Call of Duty Warzone",
     img: "https://fontmeme.com/images/cod-warzone-font.jpg",
     imgAlt: "Game Poster",
@@ -33,7 +33,7 @@ export const products = [
     isInWishlist: false,
   },
   {
-    _id: 3,
+    _id: uuid(),
     title: "Uncharted 4",
     img: "https://images-na.ssl-images-amazon.com/images/I/91grctgwzFL.jpg",
     imgAlt: "Game Poster",
@@ -46,7 +46,7 @@ export const products = [
     isInWishlist: false,
   },
   {
-    _id: 4,
+    _id: uuid(),
     title: "FIFA 22",
     img: "https://cdn-products.eneba.com/resized-products/aux8psTaKAAiuKDtaA5VfXWHh4PlLFZvk2HoXREh4wY_350x200_1x-0.jpeg",
     imgAlt: "Game Poster",
@@ -59,7 +59,7 @@ export const products = [
     isInWishlist: false,
   },
   {
-    _id: 5,
+    _id: uuid(),
     title: "Battlefield 1",
     img: "https://m.media-amazon.com/images/I/71X4netx4+L.jpg",
     imgAlt: "Game Poster",
@@ -72,7 +72,7 @@ export const products = [
     isInWishlist: false,
   },
   {
-    _id: 6,
+    _id: uuid(),
     title: "Assassin's Creed Valhalla",
     img: "https://store-images.s-microsoft.com/image/apps.1547.14585440003614248.9f7109bf-73f7-4bc7-ba61-1eeb006d905a.75930d81-6e85-436d-9b61-1279b8dd9b31",
     imgAlt: "Game Poster",
@@ -85,7 +85,7 @@ export const products = [
     isInWishlist: false,
   },
   {
-    _id: 7,
+    _id: uuid(),
     title: "Minecraft",
     img: "https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png",
     imgAlt: "Game Poster",
@@ -98,7 +98,7 @@ export const products = [
     isInWishlist: false,
   },
   {
-    _id: 8,
+    _id: uuid(),
     title: "The Last of Us",
     img: "https://upload.wikimedia.org/wikipedia/en/4/46/Video_Game_Cover_-_The_Last_of_Us.jpg",
     imgAlt: "Game Poster",
