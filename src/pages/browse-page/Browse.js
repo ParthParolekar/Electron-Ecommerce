@@ -39,6 +39,14 @@ const Browse = () => {
       filterState;
     let displayProducts = productList;
 
+    if (search.length > 0) {
+      displayProducts = displayProducts.filter(
+        (product) =>
+          product.title.slice(0, search.length).toLowerCase() ===
+          search.toLowerCase()
+      );
+    }
+
     if (filterByCategories.length > 0) {
       displayProducts = [].concat.apply(
         [],
